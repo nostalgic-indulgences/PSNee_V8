@@ -1,7 +1,8 @@
 // PSNee V8 - Ultimate PSX unlocker.   /ver. 8.0.1
 // Developed by brill & postal2201, based on PSNee V7 open source project.   /Emu-land.net
+//Code amended to work with 8Mhz internal oscillator by @nosIndulgences
 
-#define F_CPU 16000000L
+#define F_CPU 8000000L //changed CPU speed to match internal 8MHz Oscillator
 #include <stdint.h>
 #include <stdbool.h>
 #include <avr/io.h>
