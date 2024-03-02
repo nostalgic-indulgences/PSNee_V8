@@ -1,10 +1,15 @@
-# PSNee V8
+# USBasp via AVRDUDESS
 
-The first stealth modchip supporting unlocking BIOS of Japanese versions Sony PlayStation 1
+This guide utilizes the USBasp programmer that you can readily buy off AliExpress.  
+Ensure it's the USBasp version with the 10p>6p adapter and not the USBISP variety.
 
-![Logo](images/PSNee_V8_logo.png)
-Developed by **brill** & **postal2201**, based on PSNee V7 open source project.  
-- http://www.emu-land.net/forum/index.php/topic,85934.0.html
+Install the drivers for the USBasp programmer by following the steps here:-  
+https://www.instructables.com/USBASP-Installation-in-Windows-10/
+
+Download the latest version of AVERDUESS here:-  
+https://blog.zakkemble.net/avrdudess-a-gui-for-avrdude/  
+
+![AVRDUDESS](images/USBasp.png)
 
 ## Supported platforms
 PsNee V8 supports the following MCU's:  
@@ -12,27 +17,15 @@ PsNee V8 supports the following MCU's:
 - ATmega168(A/P/PA) @16Mhz  
 
 ## Installation
-Use the programmer to flash MCU. 
-**Flashing via COM port is not supported.**
+Connect the programmer to the Arduino Nano via 6 pin header (or your custom chip)
 
-### Fuses
-Before flashing the MCU, you need to configure the fuses.  
-- Fuses for JAP_FAT consoles: **H: DF, L: EE, E: FF**  
-- Fuses for all other consoles: **H: DF, L: FF, E: FF**  
-
-### Arduino
-To install via the Arduino IDE may require the installation of the [MiniCore](https://github.com/MCUdude/MiniCore) package.
-
-Example of correct setting for ATmega328P:\
-**Don't use a bootloader!**
-
-![ArduinoIDE](images/example.png)
-
-After that select the type console - uncoment define in file project(*.ino)
-
-![Console](images/console.png)
-
-Final step: Sketch -> Upload Using Programmer
-
-## Installation diagram
-![Board](images/PSNee_V8_pinout.png)
+Please follow the sequence in the diagram above.
+1. Select the correct programmer in the dropdown list
+2. Select the correct port > usb
+3. Select the correct MCU > ATmega328P / ATmega168P
+4. Select the correct pre-compiled HEX file that corresponds to your console:-
+- https://github.com/nostalgic-indulgences/PSNee_V8/tree/main/HEX
+5. Set your fuses based on the following criteria and ensure the "set fuses" checkbox is selected:- 
+- JAP_FAT consoles: **L: EE | H: DF | E: FF**  
+- All other consoles: **L: FF | H: DF | E: FF**
+6. Hit "Program" and you're done!
