@@ -1,6 +1,6 @@
 # TL866II+, T48, T56 (XGecu) Programmers via XGPRO
 
-This guide utilizes the ICSP (In Circuit Series Programmer) feature of the TL866II+, T48, T56 series of programmers.  
+This guide utilizes the ICSP (**I**n-**C**ircuit-**S**eries-**P**rogramming) feature of the TL866II+, T48, T56 series of programmers.  
 In the following guide, I'll be using my XGecu T56 programmer for illustrative purposes.  
 _For peeps who have the QFP32>DIP28 adapter, you can follow through most of the guide as well except that you will use the default ZIF socket interface!_
 
@@ -11,11 +11,11 @@ http://www.xgecu.com/en/download.html
 
 ## Supported Platforms
 PsNee V8 supports the following MCU's:  
-- ATmega328(A/P/PA) @16Mhz  
-- ATmega168(A/P/PA) @16Mhz
+- ATmega328(A/P/PA) @16Mhz (External Oscillator only, Internal 8MHz oscillator is too slow for region patching)  
+- ATmega168(A/P/PA) @16Mhz (External Oscillator only, Internal 8MHz oscillator is too slow for region patching)
 
 ## Hardware Connection  
-Connect your programmer to the Arduino Nano / Clone / Custom PCB using the appropriate ICSP Header orientations below:-  
+Connect your programmer to the Arduino Nano / Clone / Custom boards using the appropriate ICSP Header orientations below:-  
 
 > Arduino Nano / Clone ICSP Pinout Diagram
 
@@ -35,27 +35,27 @@ Connect your programmer to the Arduino Nano / Clone / Custom PCB using the appro
 
 ## Programming
 
-**_!!! Please note that the ICSP on the Arduino Nano / Clone boards are 5V intolerant !!!_**  
+**_!!! Please note that the ICSP on the Arduino Nano / Clone boards are 5V INTOLERANT !!!_**  
 **_!!! The Vcc output from the programmers are 5V only !!!_**  
-_Connect the arduino boards to the USB port directly for power._  
-_The on-board 3.3V LDO will step down the voltage accordingly._
+_Connect the Arduino Boards to the PC USB port directly for power._  
+_The on-board 3.3V LDO voltage regulator will step-down the voltage accordingly._
 
 ![XGPRO](images/XGPRO0.png)
 
 **Please follow the sequence in the diagram above:-**  
 
-> **1. Select the correct MCU in the dropdown list.**
+> **1. Select the correct MCU in the selection menu.**
   
 ![MCU_SELECT](images/XGPRO1.png)
 
-  i. Type in the MCU of your choosing (ATmega328P / ATmega168P)  
-  ii. Select the MCU in TQFP32 package _(Select DIP28 package if you're using the QFP32>DIP28 adapter)_
+  i. Type in the MCU of your preference (ATmega328P / ATmega168P)  
+  ii. Select the MCU in DIP28 package that would cater for both ICSP/Adapter users
   
 > **2. Select the correct connection interface type > "ICSP Port".**  
->    Uncheck the "ISCP_VCC Enable" checkbox.
+>    **Uncheck the "ISCP_VCC Enable" checkbox.**
 
 > **3. Check connectivity to the MCU by attempting a "Read" operation.**  
->    If error, check all the connections again.
+>    **If error, check all the connections again.**
   
 > **4. Download the appropriate pre-compiled HEX file that corresponds to your console:-**  
 https://github.com/nostalgic-indulgences/PSNee_V8/tree/main/HEX
@@ -74,7 +74,7 @@ Load the HEX file you have downloaded and leave all the settings as default.
   
 ![JAP_FAT](images/XGPRO32.png)
   
-  i. Select the checkboxes based on your console version.   
+  i. Select the fuse checkboxes based on your console version.   
   ii. Verify your fuse settings based on the following criteria:-
     
   **All CONSOLES except JAP_FAT - L: FF | H: DF | E: FF**  
