@@ -1,7 +1,7 @@
 # USBasp via AVRDUDESS
 
 This guide utilizes the USBasp programmer that you can readily get off AliExpress or Amazon.  
-Ensure it's the USBasp version with the 10-pin > 6-pin adapter, and not the USBISP variety.  
+Ensure it's the USBasp version with the 10-pin > 6-pin adapter, and not the AVRISP/USBISP variety.  
 **_!!! DO NOT GET THE VERSION WITH ALUMINIUM SHELL !!!_**
 
 ![ARDUINO NANO CLONE](images/USBasp.png)  
