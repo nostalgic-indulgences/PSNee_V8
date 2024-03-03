@@ -66,16 +66,16 @@ Load the HEX file you have downloaded and leave all the settings as default.
     
 **For ALL CONSOLES besides JAP_FAT version**
 
-![ALL_EXCEPT_JAP_FAT](images/XGPRO32.png)
+![ALL_EXCEPT_JAP_FAT](images/XGPRO31.png)
 
 **For JAP_FAT CONSOLES only**
   
-![JAP_FAT](images/XGPRO31.png)
+![JAP_FAT](images/XGPRO32.png)
   
   i. Select the checkboxes based on your console version  
   ii. Verify your fuse settings based on the following criteria:-
     
   **All CONSOLES besides JAP_FAT - L: FF | H: DF | E: FF**  
-  **JAP_FAT consoles - L: EE | H: DF | E: FF**
+  **JAP_FAT consoles only - L: EE | H: DF | E: FF**
   
 > 6. Hit "**Prog.**" and you are all set!
