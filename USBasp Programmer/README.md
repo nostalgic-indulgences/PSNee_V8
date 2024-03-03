@@ -1,7 +1,9 @@
 # USBasp via AVRDUDESS
 
 This guide utilizes the USBasp programmer that you can readily buy off AliExpress.  
-Ensure it's the USBasp version with the 10p>6p adapter and not the USBISP variety.
+Ensure it's the USBasp version with the 10-pin>6-pin adapter and not the USBISP variety.  
+
+![AVRDUDESS](images/AVERDUDESS.png)  
 
 Install the drivers for the USBasp programmer by following the steps here:-  
 https://www.instructables.com/USBASP-Installation-in-Windows-10/
@@ -9,12 +11,18 @@ https://www.instructables.com/USBASP-Installation-in-Windows-10/
 Download the latest version of AVERDUESS here:-  
 https://blog.zakkemble.net/avrdudess-a-gui-for-avrdude/  
 
-![AVRDUDESS](images/USBasp.png)
+Connect the USBasp programmer using the corect ICSP (In Circuit Series Programmer) Header orientation below:-
+  
+![AVRDUDESS](images/AVERDUDESS.png)
 
-## Supported platforms
+## Supported Platforms
 PsNee V8 supports the following MCU's:  
 - ATmega328(A/P/PA) @16Mhz  
-- ATmega168(A/P/PA) @16Mhz  
+- ATmega168(A/P/PA) @16Mhz
+
+## Hardware Connection  
+Connect the USBasp programmer using the corect ICSP (In Circuit Series Programmer) Header orientation below:-
+![AVRDUDESS](images/ICSP.png)
 
 ## Installation
 Connect the programmer to the Arduino Nano via 6 pin header (or your custom chip)
