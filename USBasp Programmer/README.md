@@ -2,6 +2,7 @@
 
 This guide utilizes the USBasp programmer that you can readily buy off AliExpress.  
 Ensure it's the USBasp version with the 10-pin>6-pin adapter and not the USBISP variety.  
+**_!!! DO NOT GET THE VERSION WITH ALUMINIUM SHELL !!!_**
 
 ![ARDUINO NANO CLONE](images/USBasp.png)  
 
