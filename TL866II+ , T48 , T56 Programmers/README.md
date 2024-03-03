@@ -38,7 +38,8 @@ Connect your programmer to the Arduino Nano / Clone / Custom boards using the ap
 **_!!! Please note that the ICSP on the Arduino Nano / Clone boards are 5V INTOLERANT !!!_**  
 **_!!! The Vcc output from the programmers are 5V only !!!_**  
 _Connect the Arduino Boards to the PC USB port directly for power._  
-_The on-board 3.3V LDO voltage regulator will step-down the voltage accordingly._
+_You do not need to connect the Vcc & Ground Pins of the programmer to the boards if you are powering them through USB._  
+_The on-board 3.3V LDO voltage regulator will step-down the voltage from the USB port accordingly._   
 
 ![XGPRO](images/XGPRO0.png)
 
