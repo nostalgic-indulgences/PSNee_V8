@@ -18,7 +18,7 @@ PsNee V8 supports the following MCU's:
 - ATmega168(A/P/PA) @16Mhz (External Oscillator only, Internal 8MHz oscillator is too slow for region patching)
 
 ## Hardware Connection  
-Connect the USBasp programmer to the Arduino Nano / Clone / Custom PCB using the corect ICSP (**I**n-**C**ircuit-**S**eries-**P**rogramming) Header orientation below:-  
+Connect the USBasp programmer to the Arduino Nano / Clone / Custom PCB using the correct ICSP (**I**n-**C**ircuit-**S**eries-**P**rogramming) Header orientation below:-  
 
 ![ICSP](images/ICSP.png)
 
