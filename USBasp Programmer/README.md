@@ -23,7 +23,7 @@ Connect the USBasp programmer to the Arduino Nano / Clone / Custom PCB using the
 
 ## Programming
 
-![AVRDUDESS](images/AVRDUDES.png)
+![AVRDUDESS](images/AVRDUDESS.png)
 
 Please follow the sequence in the diagram above.
 1. Select the correct programmer in the dropdown list
