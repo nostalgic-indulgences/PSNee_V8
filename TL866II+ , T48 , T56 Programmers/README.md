@@ -65,7 +65,7 @@ https://github.com/nostalgic-indulgences/PSNee_V8/tree/main/HEX
   
 Load the HEX file you have downloaded and leave all the settings as default.
   
-![)AD_HEX](images/XGPRO2.png)
+![HEX_SELECT](images/XGPRO2.png)
 
 > **5. Select the "CONFIG" tab to set the fuses based on the 2 criteria below:-**  
     
@@ -84,3 +84,10 @@ Load the HEX file you have downloaded and leave all the settings as default.
   **JAP_FAT consoles only - L: EE | H: DF | E: FF**
   
 > **6. Hit "**Prog.**" and you are all set!**
+  
+> **Appendix**
+**Voltage Divider 5V > 3.3V
+  
+![VOLTAGE_DIVIDER](images/VD.png)
+
+
