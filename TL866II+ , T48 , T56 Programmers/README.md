@@ -51,7 +51,7 @@ _The on-board 3.3V LDO voltage regulator will step-down the 5V voltage from the 
 ![MCU_SELECT](images/XGPRO1.png)
 
   i. Type in the MCU of your preference (ATmega328P / ATmega168P)  
-  ii. Select the MCU in DIP28 package that would cater for both ICSP/Adapter users
+  ii. Select the MCU in TQFP32/DIP28 package that would cater for both ICSP/Adapter users
   
 > **2. Select the correct connection interface type > "ICSP Port".**  
 >    **Uncheck the "ISCP_VCC Enable" checkbox.**  
