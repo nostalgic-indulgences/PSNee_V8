@@ -52,7 +52,8 @@ _The on-board 3.3V LDO voltage regulator will step-down the voltage accordingly.
   ii. Select the MCU in DIP28 package that would cater for both ICSP/Adapter users
   
 > **2. Select the correct connection interface type > "ICSP Port".**  
->    **Uncheck the "ISCP_VCC Enable" checkbox.**
+>    **Uncheck the "ISCP_VCC Enable" checkbox.**  
+>    **_For Adapter users, use default "ZIF Socket" option._**  
 
 > **3. Check connectivity to the MCU by attempting a "Read" operation.**  
 >    **If error, check all the connections again.**
