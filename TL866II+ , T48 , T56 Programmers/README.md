@@ -40,7 +40,7 @@ _You do not need to connect the Vcc & Ground Pins of the programmer to the board
 **_!!! The Vcc output from the programmers are 5V only !!!_**  
 _Connect the Arduino Boards to the PC USB port directly for power._  
 _You do not need to connect the Vcc & Ground Pins of the programmer to the boards if you are powering them through USB._  
-_The on-board 3.3V LDO voltage regulator will step-down the voltage from the USB port accordingly._   
+_The on-board 3.3V LDO voltage regulator will step-down the 5V voltage from the USB port accordingly._   
 
 ![XGPRO](images/XGPRO0.png)
 
