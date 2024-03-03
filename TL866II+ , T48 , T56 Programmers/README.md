@@ -1,16 +1,12 @@
-# USBasp via AVRDUDESS
+# TL866II+, T48, T56 (XGecu) Programmers via XGPRO
 
-This guide utilizes the USBasp programmer that you can readily buy off AliExpress.  
-Ensure it's the USBasp version with the 10-pin>6-pin adapter and not the USBISP variety.  
-**_!!! DO NOT GET THE VERSION WITH ALUMINIUM SHELL !!!_**
+This guide utilizes the TL866II+, T48, T56 series of programmers that you can buy off AliExpress.  
+In the following guide, I'll using my T56 as an illustrative example.  
 
-![ARDUINO NANO CLONE](images/USBasp.png)  
+![T56_ICSP](images/ICSP.png)  
 
-Install the drivers for the USBasp programmer by following the steps here:-  
-https://www.instructables.com/USBASP-Installation-in-Windows-10/
-
-Download the latest version of AVERDUESS here:-  
-https://blog.zakkemble.net/avrdudess-a-gui-for-avrdude/  
+Download the latest version of XGPRO here:-  
+http://www.xgecu.com/en/download.html
 
 ## Supported Platforms
 PsNee V8 supports the following MCU's:  
@@ -20,7 +16,16 @@ PsNee V8 supports the following MCU's:
 ## Hardware Connection  
 Connect the USBasp programmer to the Arduino Nano / Clone / Custom PCB using the corect ICSP (In Circuit Series Programmer) Header orientation below:-  
 
-![ICSP](images/ICSP.png)
+![NANO_ICSP](images/NANO_ICSP.png)
+
+> TL866II+ ICSP Pinout Diagram
+
+![TL866II_ICSP](images/T866II_ICSP.png)
+  
+> T48 ICSP Pinout Diagram  
+
+![T48_ICSP](images/T866II_ICSP.png)
+
 
 ## Programming
 
