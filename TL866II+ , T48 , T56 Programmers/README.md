@@ -16,6 +16,7 @@ PsNee V8 supports the following MCU's:
 
 ## Hardware Connection  
 Connect your programmer to the Arduino Nano / Clone / Custom boards using the appropriate ICSP Header orientations below:-  
+_You do not need to connect the Vcc & Ground Pins of the programmer to the boards if you are powering them through USB._  
 
 > Arduino Nano / Clone ICSP Pinout Diagram
 
