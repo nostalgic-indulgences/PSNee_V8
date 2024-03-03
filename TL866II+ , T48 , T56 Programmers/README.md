@@ -2,7 +2,7 @@
 
 This guide utilizes the ICSP (**I**n-**C**ircuit-**S**eries-**P**rogramming) feature of the TL866II+, T48, T56 series of programmers.  
 In the following guide, I'll be using my XGecu T56 programmer for illustrative purposes.  
-_For peeps who have the QFP32>DIP28 adapter, you can follow through most of the guide as well except that you will use the default ZIF socket interface!_
+_For peeps who have the QFP32>DIP28 adapter, you can follow through most of the guide as well except that you would use the default ZIF socket interface!_
 
 ![T56_ICSP](images/ICSP.png)  
 
