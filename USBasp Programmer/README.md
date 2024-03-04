@@ -26,14 +26,15 @@ Connect the USBasp programmer to the Arduino Nano / Clone / Custom PCB using the
 
 ![AVRDUDESS](images/AVRDUDESS.png)
 
-Please follow the sequence in the diagram above.
-1. Select the correct programmer in the dropdown list > "Any usbasp clone with correct VID/PID"
-2. Select the correct port > "usb"
-3. Select the correct MCU > "ATmega328P" / "ATmega168P"
-4. Download and select the correct pre-compiled HEX file that corresponds to your console:-
-- https://github.com/nostalgic-indulgences/PSNee_V8/tree/main/HEX
-5. Set your fuses based on the following criteria and ensure the "Set fuses" checkbox is selected:- 
-- JAP_FAT consoles: **L: EE | H: DF | E: FF**  
-- All other consoles: **L: FF | H: DF | E: FF**
-6. Select the tickbox to erase the flash of the MCU
-7. Hit "**Program!**" and you are all set!
+**_Please follow the sequence in the diagram above._**  
+### 1. Select the correct programmer in the dropdown list > "Any usbasp clone with correct VID/PID"
+### 2. Select the correct port > "usb"
+### 3. Select the correct MCU > "ATmega328P" / "ATmega168P"
+### 4. Download and select the correct pre-compiled HEX file that corresponds to your console:-
+https://github.com/nostalgic-indulgences/PSNee_V8/tree/main/HEX
+### 5. Set your fuses based on the following criteria and ensure the "Set fuses" checkbox is selected:- 
+>JAP_FAT consoles: **L: EE | H: DF | E: FF**
+  
+>All other consoles: **L: FF | H: DF | E: FF**
+### 6. Select the tickbox to erase the flash of the MCU
+### 7. Hit "**Program!**" and you are all set!
