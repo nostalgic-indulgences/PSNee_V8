@@ -17,7 +17,6 @@ PsNee V8 supports the following MCU's:
 ## Hardware Connection  
 Connect your programmer to the Arduino Nano / Clone / Custom boards using the appropriate ICSP Header orientations below:-  
 _You do not need to connect the Vcc & GND Pins of the programmer to the boards if you are powering them through USB._  
-_Alternatively, you can create a voltage divider network to place it between Vcc and GND pins of the programmer, refer to Appendix section below._
 
 > **Arduino Nano / Clone ICSP Pinout Diagram**
 
@@ -42,6 +41,7 @@ _Alternatively, you can create a voltage divider network to place it between Vcc
 _Connect the Arduino Boards to the PC USB port directly for power._  
 _You do not need to connect the Vcc & GND Pins of the programmer to the boards if you are powering them through USB._  
 _The on-board 3.3V LDO voltage regulator will step-down the 5V voltage from the USB port accordingly._   
+_Alternatively, you can create a 5V to 3.3V voltage divider network to place it between Vcc and GND pins of the programmer, refer to Appendix section below._  
 
 ![XGPRO](images/XGPRO0.png)
 
