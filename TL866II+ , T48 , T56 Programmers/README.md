@@ -19,19 +19,19 @@ Connect your programmer to the Arduino Nano / Clone / Custom boards using the ap
 _You do not need to connect the Vcc & GND Pins of the programmer to the boards if you are powering them through USB._  
 _Alternatively, you can create a voltage divider network to place it between Vcc and GND pins of the programmer, refer to Appendix section below._
 
-> Arduino Nano / Clone ICSP Pinout Diagram
+> **Arduino Nano / Clone ICSP Pinout Diagram**
 
 ![NANO_ICSP](images/NANO_ICSP.png)
 
-> TL866II+ ICSP Pinout Diagram
+> **TL866II+ ICSP Pinout Diagram**
 
 ![TL866II_ICSP](images/TL866II_ICSP.png)
   
-> T48 ICSP Pinout Diagram  
+> **T48 ICSP Pinout Diagram**
 
 ![T48_ICSP](images/T48_ICSP.png)
 
-> T56 ICSP Pinout Diagram  
+> **T56 ICSP Pinout Diagram**
 
 ![T56_ICSP](images/T56_ICSP.png)
 
@@ -45,30 +45,30 @@ _The on-board 3.3V LDO voltage regulator will step-down the 5V voltage from the 
 
 ![XGPRO](images/XGPRO0.png)
 
-**Please follow the sequence in the diagram above:-**  
+**_Please follow the sequence listed in the diagram above:-_**  
 
-> **1. Select the correct MCU in the selection menu.**
+### 1. Select the correct MCU in the selection menu.
   
 ![MCU_SELECT](images/XGPRO1.png)
 
   i. Type in the MCU of your preference (ATmega328P / ATmega168P)  
   ii. Select the MCU in TQFP32/DIP28 package that would cater for both ICSP/Adapter users
   
-> **2. Select the correct connection interface type > "ICSP Port".**  
->    **Uncheck the "ISCP_VCC Enable" checkbox.**  
->    **_For Adapter users, use default "ZIF Socket" option._**  
+### 2. Select the correct connection interface type > "ICSP Port".  
+Uncheck the "ISCP_VCC Enable" checkbox.  
+_For Adapter users, use default "ZIF Socket" option._  
 
-> **3. Check connectivity to the MCU by attempting a "Read" operation.**  
->    **If error, check all the connections again.**
+### 3. Check connectivity to the MCU by attempting a "Read" operation.  
+If error, check all the connections again.
   
-> **4. Download the appropriate pre-compiled HEX file that corresponds to your console:-**  
+### 4. Download the appropriate pre-compiled HEX file that corresponds to your console:-  
 https://github.com/nostalgic-indulgences/PSNee_V8/tree/main/HEX
   
 Load the HEX file you have downloaded and leave all the settings as default.
   
 ![HEX_SELECT](images/XGPRO2.png)
 
-> **5. Select the "CONFIG" tab to set the fuses based on the 2 criteria below:-**  
+### 5. Select the "CONFIG" tab to set the fuses based on the 2 criteria below:-  
     
 **For ALL CONSOLES besides JAP_FAT version**
 
@@ -81,10 +81,10 @@ Load the HEX file you have downloaded and leave all the settings as default.
   i. Select the fuse checkboxes based on your console version.   
   ii. Verify your fuse settings based on the following criteria:-
     
-  **All CONSOLES except JAP_FAT - L: FF | H: DF | E: FF**  
-  **JAP_FAT consoles only - L: EE | H: DF | E: FF**
+  All CONSOLES except JAP_FAT - **L: FF | H: DF | E: FF**  
+  JAP_FAT consoles only - **L: EE | H: DF | E: FF**
   
-> **6. Hit "**Prog.**" and you are all set!**
+### 6. Hit "**Prog.**" and you are all set!
   
 ## **Appendix**
   
