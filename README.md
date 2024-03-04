@@ -1,6 +1,5 @@
 >_Addendum by Nostalgic Indulgences_
 >
->_I have created guides above that corresponds to programming methods possible for the PSNee V8._  
 >_One of the most daunting and convoluted obstacles when it comes to using the PSNee V8 is the programming portion._  
 >_I have created 2 guides based on USBasp and T866II+/T/48/T56 programmers to smash those obstacles and make it as accessible as it can ever be._
 
