@@ -70,11 +70,11 @@ Load the HEX file you have downloaded and leave all the settings as default.
 
 ### 5. Select the "CONFIG" tab to set the fuses based on the 2 criteria below:-  
     
-**For ALL CONSOLES besides JAP_FAT version**
+>**For ALL CONSOLES besides JAP_FAT version**
 
 ![ALL_EXCEPT_JAP_FAT](images/XGPRO31.png)
 
-**For JAP_FAT CONSOLES only**
+>**For JAP_FAT CONSOLES only**
   
 ![JAP_FAT](images/XGPRO32.png)
   
