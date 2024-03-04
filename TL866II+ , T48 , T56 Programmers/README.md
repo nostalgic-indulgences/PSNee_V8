@@ -95,3 +95,4 @@ Load the HEX file you have downloaded and leave all the settings as default.
 Make use of 2 simple leaded resistors of 2K & 1K Ohms values stipulated in the schematic above.  
 Place the resistor network between the 5V-Vcc and GND pins of the programmer.  
 Connect the 3.3V output to the Arduino Nano / Clone / Custom PCB.  
+Do remember to select the ""ISCP_VCC Enable" checkbox in the "Set Interface" section in this instance.
