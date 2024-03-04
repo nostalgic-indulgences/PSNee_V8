@@ -16,7 +16,8 @@ PsNee V8 supports the following MCU's:
 
 ## Hardware Connection  
 Connect your programmer to the Arduino Nano / Clone / Custom boards using the appropriate ICSP Header orientations below:-  
-_You do not need to connect the Vcc & Ground Pins of the programmer to the boards if you are powering them through USB._  
+_You do not need to connect the Vcc & GND Pins of the programmer to the boards if you are powering them through USB._  
+_Alternatively, you can create a voltage divider network to place it between Vcc and GND pins of the programmer, refer to Appendix section below._
 
 > Arduino Nano / Clone ICSP Pinout Diagram
 
@@ -39,7 +40,7 @@ _You do not need to connect the Vcc & Ground Pins of the programmer to the board
 **_!!! Please note that the ICSP on the Arduino Nano / Clone boards are 5V INTOLERANT !!!_**  
 **_!!! The Vcc output from the programmers are 5V only !!!_**  
 _Connect the Arduino Boards to the PC USB port directly for power._  
-_You do not need to connect the Vcc & Ground Pins of the programmer to the boards if you are powering them through USB._  
+_You do not need to connect the Vcc & GND Pins of the programmer to the boards if you are powering them through USB._  
 _The on-board 3.3V LDO voltage regulator will step-down the 5V voltage from the USB port accordingly._   
 
 ![XGPRO](images/XGPRO0.png)
@@ -85,9 +86,12 @@ Load the HEX file you have downloaded and leave all the settings as default.
   
 > **6. Hit "**Prog.**" and you are all set!**
   
-> **Appendix**
-**Voltage Divider 5V > 3.3V
+## **Appendix**
+  
+### **Voltage Divider 5V > 3.3V**
   
 ![VOLTAGE_DIVIDER](images/VD.png)
 
-
+Make use of 2 simple leaded resistors of 2K & 1K Ohms values stipulated in the schematic above.  
+Place the resistor network between the 5V-Vcc and GND pins of the programmer.  
+Connect the 3.3V output to the Arduino Nano / Clone / Custom PCB.  
