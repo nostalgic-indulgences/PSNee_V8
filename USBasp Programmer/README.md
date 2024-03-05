@@ -20,7 +20,7 @@ PsNee V8 supports the following MCU's:
 ## Hardware Connection  
 Connect the USBasp programmer to the Arduino Nano / Clone / Custom PCB using the correct ICSP (**I**n-**C**ircuit-**S**eries-**P**rogramming) Header orientation below:-  
 
-![ICSP](images/ICSP.png)
+![ICSP](images/NANO_ICSP.png)
 
 ## Programming
 
