@@ -51,8 +51,9 @@ _Alternatively, you can create a 5V to 3.3V voltage divider network to place it 
   
 ![MCU_SELECT](images/XGPRO1.png)
 
-  i. Type in the MCU of your preference (ATmega328P / ATmega168P)  
-  ii. Select the MCU in TQFP32/DIP28 package that would cater for both ICSP/Adapter users
+>  i. Type in the MCU of your preference (ATmega328P / ATmega168P)
+  
+>  ii. Select the MCU in TQFP32/DIP28 package that would cater for both ICSP/Adapter users
   
 ### 2. Select the correct connection interface type > "ICSP Port".  
 Uncheck the "ISCP_VCC Enable" checkbox.  
