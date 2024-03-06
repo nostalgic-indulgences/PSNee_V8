@@ -1,6 +1,6 @@
 >_Addendum by Nostalgic Indulgences_
 >
->_One of the most daunting and convoluted obstacles when it comes to using the PSNee V8 is the programming portion._  
+>_One of the most daunting and convoluted obstacles when it comes to adopting the PSNee V8 is the programming portion._  
 >_I have created 2 guides based on USBasp and T866II+/T48/T56 programmers to smash those obstacles and make it as accessible as it can ever be._  
 >_Do access the respective folders for a thorough guide that corresponds to either types of programmers above._
 
