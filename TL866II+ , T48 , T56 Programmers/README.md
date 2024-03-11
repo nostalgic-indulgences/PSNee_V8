@@ -33,15 +33,26 @@ _You do not need to connect the Vcc & GND Pins of the programmer to the boards i
 > **T56 ICSP Pinout Diagram**
 
 ![T56_ICSP](images/T56_ICSP.png)
+  
 
 ## Programming
 
-**_!!! Please note that the ICSP on the Arduino Nano / Clone boards are 5V INTOLERANT !!!_**  
-**_!!! The Vcc output from the programmers are 5V only !!!_**  
-_Connect the Arduino Boards to the PC USB port directly for power._  
-_You do not need to connect the Vcc & GND Pins of the programmer to the boards if you are powering them through USB._  
-_The on-board 3.3V LDO voltage regulator will step-down the 5V voltage from the USB port accordingly._   
-_Alternatively, you can create a 5V to 3.3V voltage divider network to place it between Vcc and GND pins of the programmer, refer to Appendix section below._  
+**_Please note that the ICSP on the Arduino Nano / Clone boards are 5V INTOLERANT !!!_**  
+**_The Vcc output from the programmers is 5V only !!!_**  
+
+> **Arduino Nano / Clone**
+
+Connect the Arduino Boards to the PC USB port directly for power.  
+You do not need to connect the Vcc & GND Pins of the programmer to the boards if you are powering them through USB.  
+Alternatively, you can connect the 5V output from the programmer to the 5V input pin of the Arduino Nano / Clone boards as well.  
+The on-board 3.3V LDO voltage regulator will step-down the 5V voltage from the USB port / 5V input accordingly.  
+
+> **Custom PCB**
+
+You can create a 5V to 3.3V voltage divider network to place it between Vcc and GND pins of the programmer, refer to Appendix section below.  
+
+-----
+
 
 ![XGPRO](images/XGPRO0.png)
 
@@ -87,7 +98,10 @@ Load the HEX file you have downloaded and leave all the settings as default.
 >  JAP_FAT consoles only - **L: EE | H: DF | E: FF**
   
 ### 6. Hit "**Prog.**" and you are all set!
-  
+
+-----
+
+
 ## **Appendix**
   
 ### **Voltage Divider 5V > 3.3V**
@@ -96,5 +110,5 @@ Load the HEX file you have downloaded and leave all the settings as default.
 
 Make use of 2 simple leaded resistors of 2K & 1K Ohms values stipulated in the schematic above.  
 Place the resistor network between the 5V-Vcc and GND pins of the programmer.  
-Connect the 3.3V output to the Arduino Nano / Clone / Custom PCB.  
+Connect the 3.3V output to the Custom PCB.  
 Do remember to select the ""ISCP_VCC Enable" checkbox in the "Set Interface" section in this instance.
