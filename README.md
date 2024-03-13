@@ -1,44 +1,114 @@
->_Addendum by Nostalgic Indulgences_
->
->_One of the most daunting and convoluted obstacles when it comes to adopting the PSNee V8 is the programming portion._  
->_I have created 2 guides based on USBasp and T866II+/T48/T56 programmers to smash those obstacles and make it as accessible as it can ever be._  
->_Do access the respective folders for a thorough guide that corresponds to either types of programmers above._
+# PSNee V8 Installation Diagrams
 
-# PSNee V8
+Due to the shear amount of motherboard revisions out there, it is rather time-consuming for me to create individual diagrams for all of them.  
+Hence, for the time being, I'm be adopting the most time efficient approach by way of supplementing readily available information.  
+_For peeps who have the QFP32>DIP28 adapter, you can follow through most of the guide as well except that you would use the default ZIF socket interface!_
 
-The first stealth modchip supporting unlocking BIOS of Japanese versions Sony PlayStation 1
+![T56_ICSP](images/ICSP.png)  
 
-![Logo](images/PSNee_V8_logo.png)
-Developed by **brill** & **postal2201**, based on PSNee V7 open source project.  
-- http://www.emu-land.net/forum/index.php/topic,85934.0.html
+Download the latest version of XGPRO here:-  
+http://www.xgecu.com/en/download.html
 
-## Supported platforms
+## Supported Platforms
 PsNee V8 supports the following MCU's:  
-- ATmega328(A/P/PA) @16Mhz  
-- ATmega168(A/P/PA) @16Mhz  
+- ATmega328(A/P/PA) @16Mhz (External Oscillator only, Internal 8MHz oscillator is too slow for region patching)  
+- ATmega168(A/P/PA) @16Mhz (External Oscillator only, Internal 8MHz oscillator is too slow for region patching)
 
-## Installation
-Use the programmer to flash MCU. 
-**Flashing via COM port is not supported.**
+## Hardware Connection  
+Connect your programmer to the Arduino Nano / Clone / Custom boards using the appropriate ICSP Header orientations below:-  
+_You do not need to connect the Vcc & GND Pins of the programmer to the boards if you are powering them through USB._  
 
-### Fuses
-Before flashing the MCU, you need to configure the fuses.  
-- Fuses for JAP_FAT consoles: **H: DF, L: EE, E: FF**  
-- Fuses for all other consoles: **H: DF, L: FF, E: FF**  
+> **Arduino Nano / Clone ICSP Pinout Diagram**
 
-### Arduino
-To install via the Arduino IDE may require the installation of the [MiniCore](https://github.com/MCUdude/MiniCore) package.
+![NANO_ICSP](images/NANO_ICSP.png)
 
-Example of correct setting for ATmega328P:\
-**Don't use a bootloader!**
+> **TL866II+ ICSP Pinout Diagram**
 
-![ArduinoIDE](images/example.png)
+![TL866II_ICSP](images/TL866II_ICSP.png)
+  
+> **T48 ICSP Pinout Diagram**
 
-After that select the type console - uncoment define in file project(*.ino)
+![T48_ICSP](images/T48_ICSP.png)
 
-![Console](images/console.png)
+> **T56 ICSP Pinout Diagram**
 
-Final step: Sketch -> Upload Using Programmer
+![T56_ICSP](images/T56_ICSP.png)
+  
 
-## Installation diagram
-![Board](images/PSNee_V8_pinout.png)
+## Programming
+
+**_Please note that the ICSP on the Arduino Nano / Clone boards are 5V INTOLERANT !!!_**  
+**_The Vcc output from the programmers is 5V only !!!_**  
+
+> **Arduino Nano / Clone**
+
+Connect the Arduino Boards to the PC USB port directly for power.  
+You do not need to connect the Vcc & GND Pins of the programmer to the boards if you are powering them through USB.  
+Alternatively, you can connect the 5V output from the programmer to the 5V input pin of the Arduino Nano / Clone boards as well.  
+The on-board 3.3V LDO voltage regulator will step-down the 5V voltage from the USB port / 5V input accordingly.  
+
+> **Custom PCB**
+
+You can create a 5V to 3.3V voltage divider network to place it between Vcc and GND pins of the programmer, refer to Appendix section below.  
+
+-----
+
+
+![XGPRO](images/XGPRO0.png)
+
+**_Please follow the sequence listed in the diagram above:-_**  
+
+### 1. Select the correct MCU in the selection menu.
+  
+![MCU_SELECT](images/XGPRO1.png)
+
+>  i. Type in the MCU of your preference (ATmega328P / ATmega168P)
+  
+>  ii. Select the MCU in TQFP32/DIP28 package that would cater for both ICSP/Adapter users
+  
+### 2. Select the correct connection interface type > "ICSP Port".  
+Uncheck the "ISCP_VCC Enable" checkbox.  
+_For Adapter users, use default "ZIF Socket" option._  
+
+### 3. Check connectivity to the MCU by attempting a "Read" operation.  
+If error, check all the connections again.
+  
+### 4. Download the appropriate pre-compiled HEX file that corresponds to your console:-  
+https://github.com/nostalgic-indulgences/PSNee_V8/tree/main/HEX
+  
+Load the HEX file you have downloaded and leave all the settings as default.
+  
+![HEX_SELECT](images/XGPRO2.png)
+
+### 5. Select the "CONFIG" tab to set the fuses based on the 2 criteria below:-  
+    
+>**For ALL CONSOLES besides JAP_FAT version**
+
+![ALL_EXCEPT_JAP_FAT](images/XGPRO31.png)
+
+>**For JAP_FAT CONSOLES only**
+  
+![JAP_FAT](images/XGPRO32.png)
+  
+>  i. Select the fuse checkboxes based on your console version.
+  
+>  ii. Verify your fuse settings based on the following criteria:-
+    
+>  All CONSOLES except JAP_FAT - **L: FF | H: DF | E: FF**  
+>  JAP_FAT consoles only - **L: EE | H: DF | E: FF**
+  
+### 6. Hit "**Prog.**" and you are all set!
+
+-----
+
+
+## **Appendix**
+  
+### **Voltage Divider 5V > 3.3V**
+  
+![VOLTAGE_DIVIDER](images/VD.png)
+
+Make use of 2 simple leaded resistors of 2K & 1K Ohms values stipulated in the schematic above.  
+Place the resistor network between the 5V-Vcc and GND pins of the programmer.  
+Connect the 3.3V output to the Custom PCB.  
+Do remember to select the ""ISCP_VCC Enable" checkbox in the "Set Interface" section in this instance.
