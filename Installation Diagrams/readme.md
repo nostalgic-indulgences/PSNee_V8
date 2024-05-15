@@ -17,10 +17,10 @@
 > SCPH_3500_5000
 - DX - D0(Pin13), AX - A5(Pin07). 32-pin BIOS ver. 2.2j, CRC 24FC7E17 | 2.1j, CRC BC190209
 > SCPH_3000
-- DX - D5(Pin24), AX - A6(Pin04), AY - A7(Pin03). 40-pin BIOS ver. 1.1j, CRC 3539DEF6\
+- DX - D5(Pin24), AX - A6(Pin04), AY - A7(Pin03). 40-pin BIOS ver. 1.1j, CRC 3539DEF6
 - DX - D5(Pin19), AX - A7(Pin03), AY - A8(Pin02). 32-pin BIOS ver. 1.1j, CRC 3539DEF6
 > SCPH_1000
-- DX - D5(Pin24), AX - A6(Pin04), AY - A7(Pin03). 40-pin BIOS ver. 1.0j, CRC 3B601FC8\
+- DX - D5(Pin24), AX - A6(Pin04), AY - A7(Pin03). 40-pin BIOS ver. 1.0j, CRC 3B601FC8
 - DX - D5(Pin19), AX - A7(Pin03), AY - A8(Pin02). 32-pin BIOS ver. 1.0j, CRC 3B601FC8
 
 _*** You can use the 32/40-pin BIOS pinout diagrams included in the subfolder as reference material._
